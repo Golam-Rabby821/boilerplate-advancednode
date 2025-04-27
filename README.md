@@ -5,13 +5,13 @@ This is the boilerplate for the Advanced Node and Express lessons. Instructions 
 # Real-Time Chat Application 💬
 
 [![Node.js Version](https://img.shields.io/badge/node-%3E%3D14.0.0-brightgreen)](https://nodejs.org/)
-[![Express](https://img.shields.io/badge/expressjs-express-blue)](https://www.npmjs.com/package/express)
+[![Express](https://img.shields.io/badge/expressjs-4.x-blue)](https://www.npmjs.com/package/express)
 [![Socket.IO](https://img.shields.io/badge/socket.io-4.x-blue)](https://socket.io/)
 
 A full-stack real-time chat application built with Node.js, Express, and Socket.IO. Features user authentication, real-time messaging, and persistent message history.
 
-![Chat Application Preview](https://via.placeholder.com/800x400.png?text=Chat+App+Preview) 
-*Add screenshot here*
+![Chat Application Preview](https://via.placeholder.com/800x400.png?text=Chat+App+Preview)
+_Add screenshot here_
 
 ## Features 🚀
 
@@ -35,15 +35,20 @@ A full-stack real-time chat application built with Node.js, Express, and Socket.
 ## Installation ⚙️
 
 1. Clone the repository:
+
 ```bash
 git clone https://github.com/yourusername/chat-app.git
 cd chat-app
 ```
+
 2. Install dependencies:
+
 ```bash
 npm install
 ```
+
 3. Create .env file:
+
 ```bash
 env
 MONGODB_URI=mongodb://localhost:27017/chat-app
@@ -53,18 +58,19 @@ GITHUB_CLIENT_SECRET=your_github_client_secret
 ```
 
 4. Start the application:
+
 ```bash
 npm run dev
 ```
 
 ## Configuration 🔧
 
-| Environment Variable     | Description                          |
-|--------------------------|--------------------------------------|
-| `MONGODB_URI`            | MongoDB connection string            |
-| `SESSION_SECRET`         | Secret for session encryption        |
-| `GITHUB_CLIENT_ID`       | GitHub OAuth Client ID               |
-| `GITHUB_CLIENT_SECRET`   | GitHub OAuth Client Secret           |
+| Environment Variable   | Description                   |
+| ---------------------- | ----------------------------- |
+| `MONGODB_URI`          | MongoDB connection string     |
+| `SESSION_SECRET`       | Secret for session encryption |
+| `GITHUB_CLIENT_ID`     | GitHub OAuth Client ID        |
+| `GITHUB_CLIENT_SECRET` | GitHub OAuth Client Secret    |
 
 ## Usage 📖
 
@@ -75,13 +81,13 @@ npm run dev
 
 ## API Endpoints 🌐
 
-| Method | Endpoint       | Description                |
-|--------|----------------|----------------------------|
-| POST   | `/register`    | User registration          |
-| POST   | `/login`       | User login                 |
-| GET    | `/auth/github` | GitHub authentication      |
-| GET    | `/logout`      | User logout                |
-| GET    | `/chat`        | Chat interface             |
+| Method | Endpoint       | Description           |
+| ------ | -------------- | --------------------- |
+| POST   | `/register`    | User registration     |
+| POST   | `/login`       | User login            |
+| GET    | `/auth/github` | GitHub authentication |
+| GET    | `/logout`      | User logout           |
+| GET    | `/chat`        | Chat interface        |
 
 ## Contributing 🤝
 
