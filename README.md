@@ -5,7 +5,7 @@ This is the boilerplate for the Advanced Node and Express lessons. Instructions 
 # Real-Time Chat Application 💬
 
 [![Node.js Version](https://img.shields.io/badge/node-%3E%3D14.0.0-brightgreen)](https://nodejs.org/)
-[![Dependencies](https://img.shields.io/david/expressjs/express.svg)](https://david-dm.org/)
+[![Express](https://img.shields.io/badge/expressjs-express-blue)](https://www.npmjs.com/package/express)
 [![Socket.IO](https://img.shields.io/badge/socket.io-4.x-blue)](https://socket.io/)
 
 A full-stack real-time chat application built with Node.js, Express, and Socket.IO. Features user authentication, real-time messaging, and persistent message history.
