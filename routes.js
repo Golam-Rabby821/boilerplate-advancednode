@@ -1,7 +1,7 @@
 const passport = require("passport");
+const bcrypt = require("bcrypt");
 
 module.exports = function (app, myDataBase) {
-
   // Be sure to change the title
   app.route("/").get((req, res) => {
     // Change the response to render the Pug template
@@ -19,7 +19,7 @@ module.exports = function (app, myDataBase) {
     .post(
       passport.authenticate("local", { failureRedirect: "/" }),
       (req, res) => {
-        res.redirect("/profile");
+        res.redirect("/chat");
       }
     );
 
@@ -51,8 +51,8 @@ module.exports = function (app, myDataBase) {
       });
     },
     passport.authenticate("local", { failureRedirect: "/" }),
-    (req, res, next) => {
-      res.redirect("/profile");
+    (req, res) => {
+      res.redirect("/chat");
     }
   );
 
@@ -67,9 +67,14 @@ module.exports = function (app, myDataBase) {
     .get(
       passport.authenticate("github", { failureRedirect: "/" }),
       (req, res) => {
-        res.redirect("/profile");
+        req.session.user_id = req.user.id;
+        res.redirect("/chat");
       }
     );
+
+  app.route("/chat").get(ensureAuthenticated, (req, res) => {
+    res.render("chat", { user: req.user });
+  });
 
   app.route("/logout").get((req, res) => {
     req.logout();
