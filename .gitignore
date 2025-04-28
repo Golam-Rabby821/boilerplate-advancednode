@@ -1,4 +1,15 @@
-node_modules
+# Node modules
+node_modules/
+
+# Environment files
 .env
 .env.production
-sample.env
+# Don't ignore sample.env (keep it in Git!)
+
+# Logs
+logs
+*.log
+
+# OS files
+.DS_Store
+Thumbs.db
