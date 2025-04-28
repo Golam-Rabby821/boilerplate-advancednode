@@ -27,7 +27,12 @@ app.use(
     secret: process.env.SESSION_SECRET,
     resave: true,
     saveUninitialized: true,
-    cookie: { secure: false },
+    cookie: {
+      secure: process.env.NODE_ENV === "production", // only HTTPS in production
+      httpOnly: true, // prevent client-side JS from accessing cookies
+      sameSite: "lax", // prevent CSRF attacks to some extent, can be 'strict'/'lax'
+      maxAge: 1000 * 60 * 60 * 24, // cookie valid for 1 day
+    },
     key: "express.sid",
     store: store,
   })
