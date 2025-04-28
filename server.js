@@ -28,7 +28,7 @@ app.use(
     resave: true,
     saveUninitialized: true,
     cookie: {
-      secure: process.env.NODE_ENV === "production", // only HTTPS in production
+      secure: false, // only HTTPS in production
     },
     key: "express.sid",
     store: store,
